@@ -1,4 +1,5 @@
-import { useCallback, useState } from "react";
+"use client"
+import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 
 function GetRank() {

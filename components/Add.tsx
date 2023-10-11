@@ -1,5 +1,4 @@
 "use client"
-import Error from "next/error";
 import { FormEvent, useState } from "react"
 import ClipLoader from "react-spinners/ClipLoader";
 type FormData = {
