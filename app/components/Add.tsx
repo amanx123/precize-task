@@ -59,6 +59,7 @@ function Add() {
             setLoading(false)
             formTarget.reset()
         }
+        setLoading(false);
     }
     return (
         <div className="bg-neutral-900 text-white font-sans font-medium text-lg">
