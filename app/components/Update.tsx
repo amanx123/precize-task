@@ -12,7 +12,7 @@ function Update() {
         e.preventDefault()
         setLoading(true)
         try {
-            const response = await fetch('/api/view-all');
+            const response = await fetch('/api/view-all', { cache: "no-cache" });
             const data = await response.json();
             const dataFilter = data.fileData;
             const nameRecord = dataFilter.find((data: any) => data.name === name);
@@ -26,7 +26,8 @@ function Update() {
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify(updatedRecord)
+                    body: JSON.stringify(updatedRecord),
+                    cache: "no-cache"
                 })
             }
             else {

@@ -5,7 +5,7 @@ import JsonView from '@uiw/react-json-view';
 function ViewAll() {
     const [data, setData] = useState([])
     const handleClick = async () => {
-        const res = await fetch('/api/view-all').then((res) => res.json())
+        const res = await fetch('/api/view-all', { cache: "no-cache" }).then((res) => res.json())
         setData(res.fileData)
 
     }

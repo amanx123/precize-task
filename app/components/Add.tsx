@@ -16,7 +16,7 @@ function Add() {
     const [form, setForm] = useState<FormData>({ name: "", address: "", city: "", country: "", pincode: 0, satScore: 0 });
     const update = async (event: any) => {
         const target = event.currentTarget
-        const fetchNames = await fetch('/api/view-all').then(res => res.json());
+        const fetchNames = await fetch('/api/view-all', { cache: "no-cache" }).then(res => res.json());
         const dataAll = fetchNames.fileData
         const filterNames = dataAll.map((data: any) => data.name)
         setAllNames(() => filterNames)
@@ -47,7 +47,8 @@ function Add() {
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ ...formObj, "passed": passStatus })
+                    body: JSON.stringify({ ...formObj, "passed": passStatus }),
+                    cache: "no-cache"
                 })
             const data = await res.json();
             setLoading(false);

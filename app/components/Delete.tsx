@@ -11,7 +11,7 @@ function Delete() {
         e.preventDefault()
         setLoading(true)
         try {
-            const response = await fetch('/api/view-all');
+            const response = await fetch('/api/view-all', { cache: "no-cache" });
             const data = await response.json();
 
             const dataFilter = data.fileData;
@@ -23,7 +23,7 @@ function Delete() {
                     headers: {
                         "Content-Type": "application/json"
                     },
-
+                    cache: "no-cache"
                 })
             }
             else {

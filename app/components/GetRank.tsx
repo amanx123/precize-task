@@ -13,7 +13,7 @@ function GetRank() {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await fetch('/api/view-all');
+            const response = await fetch('/api/view-all', { cache: "no-cache" });
             const data = await response.json();
 
             const dataFilter = data.fileData;
