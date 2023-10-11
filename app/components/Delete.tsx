@@ -1,5 +1,6 @@
 "use client"
-import { useState } from "react"
+
+import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 
 
@@ -28,7 +29,6 @@ function Delete() {
             else {
                 alert("Name not found")
             }
-            console.log(nameRecord)
         } catch (error) {
             console.error("API call error:", error);
 

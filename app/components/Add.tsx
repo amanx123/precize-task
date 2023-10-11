@@ -1,5 +1,5 @@
 "use client"
-import { FormEvent, useState } from "react"
+import { FormEvent, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 type FormData = {
     name: string;

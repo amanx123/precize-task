@@ -1,10 +1,11 @@
 "use client"
-import Add from '@/components/Add';
-import Delete from '@/components/Delete';
-import GetRank from '@/components/GetRank';
-import Update from '@/components/Update';
-import ViewAll from '@/components/ViewAll';
-import { useState } from 'react'
+import { useState } from 'react';
+import Add from './components/Add';
+import Delete from './components/Delete';
+import GetRank from './components/GetRank';
+import Update from './components/Update';
+import ViewAll from './components/ViewAll';
+
 
 export default function Home() {
   const [buttonState, setButtonState] = useState("add");
